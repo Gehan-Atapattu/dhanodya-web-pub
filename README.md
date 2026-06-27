@@ -66,7 +66,7 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/dhanodya-website.git
+https://github.com/Gehan-Atapattu/dhanodya-web-pub.git
 ```
 
 Navigate to the project directory:
