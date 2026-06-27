@@ -1,197 +1,141 @@
-# 🌐 Dhanodya Web
+# 🌾 Dhanodya Website
 
-> A modern web application for [one-sentence description].
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![React](https://img.shields.io/badge/React-19-blue)
-![Next.js](https://img.shields.io/badge/Next.js-black)
-![TypeScript](https://img.shields.io/badge/TypeScript-blue)
-
----
-
-## 📖 Overview
-
-Dhanodya Web is a web application designed to...
-
-It provides users with...
-
-The project focuses on:
-
-- Clean UI
-- Fast performance
-- Responsive design
-- Modern architecture
-
----
+A modern, responsive website for **Dhanodya**, built with **React**, **Vite**, and **Tailwind CSS**. The project showcases the organization's mission, services, opportunities, success stories, and contact information with a clean and engaging user interface.
 
 ## ✨ Features
 
-- ✅ Responsive UI
-- ✅ Authentication
-- ✅ Dashboard
-- ✅ User Management
-- ✅ Mobile Friendly
-- ✅ REST API Integration
-- ✅ Secure Login
-- ✅ Modern Component Architecture
+- 📱 Fully responsive design
+- ⚡ Fast performance powered by Vite
+- 🎨 Modern UI with Tailwind CSS
+- 🌍 Multi-language support using i18next
+- 🎭 Smooth animations with Framer Motion
+- 🔄 Smooth scrolling navigation
+- 🖼️ Interactive sections including:
+  - Home
+  - About
+  - Services
+  - Opportunities
+  - Success Stories
+  - Contact
+- 📌 Reusable React components
 
----
+## 🛠️ Tech Stack
 
-## 🛠 Tech Stack
-
-### Frontend
-
-- React
-- Next.js
-- TypeScript
+- React 19
+- Vite
 - Tailwind CSS
+- Framer Motion
+- React Icons
+- React Scroll
+- i18next
+- Swiper
 
-### Backend
+## 📁 Project Structure
 
-- Node.js
-- Express
-
-### Database
-
-- MongoDB
-
-### Deployment
-
-- Vercel
-- Docker
-
----
-
-## 📂 Project Structure
-
-```
-dhanodya-web/
+```text
+src/
+│── assets/
+│── components/
+│   ├── About.tsx
+│   ├── Card.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Main.tsx
+│   ├── Navbar.tsx
+│   ├── Opportunities.tsx
+│   ├── Services.tsx
+│   └── SuccessStories.tsx
 │
-├── app/
-├── components/
-├── public/
-├── styles/
-├── lib/
-├── hooks/
-├── utils/
-└── README.md
+│── css/
+│── img/
+│── App.jsx
+│── i18n.js
+│── main.tsx
 ```
-
----
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 20+
-- npm or yarn
+- Node.js (v18 or later)
+- npm
 
 ### Installation
 
+Clone the repository:
+
 ```bash
-git clone https://github.com/Gehan-Atapattu/dhanodya-web-pub.git
+git clone https://github.com/your-username/dhanodya-website.git
+```
 
-cd dhanodya-web-pub
+Navigate to the project directory:
 
+```bash
+cd dhanodya-website
+```
+
+Install dependencies:
+
+```bash
 npm install
 ```
 
-### Run Development Server
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Open
+Open your browser and visit:
 
 ```
-http://localhost:3000
+http://localhost:5173
 ```
 
----
+## 📦 Available Scripts
 
-## ⚙ Environment Variables
+| Command | Description |
+|----------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
-Create a `.env.local`
+## 🌐 Internationalization
 
-```env
-NEXT_PUBLIC_API_URL=
+The project includes **i18next** for multilingual support. Translation configuration can be found in:
 
-DATABASE_URL=
-
-JWT_SECRET=
+```text
+src/i18n.js
 ```
 
----
+## 🎨 UI Components
 
-## 📷 Screenshots
+The website includes:
 
-### Home Page
+- Responsive Navigation Bar
+- Hero/Header Section
+- About Section
+- Services Section
+- Opportunities Section
+- Success Stories
+- Contact Section
+- Footer
 
-(Add screenshot)
+## 📱 Responsive Design
 
-### Dashboard
+The website is optimized for:
 
-(Add screenshot)
-
-### Mobile View
-
-(Add screenshot)
-
----
-
-## 🎯 Future Improvements
-
-- Payment Integration
-- Admin Analytics
-- Notifications
-- Dark Mode
-- Multi-language Support
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-
-```bash
-git checkout -b feature/new-feature
-```
-
-3. Commit changes
-
-```bash
-git commit -m "Add new feature"
-```
-
-4. Push
-
-```bash
-git push origin feature/new-feature
-```
-
-5. Open a Pull Request
-
----
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is intended for the Dhanodya organization. Update the license section as required for your organization.
 
 ---
 
-## 👨‍💻 Author
-
-**Gehan Atapattu**
-
-GitHub:
-https://github.com/Gehan-Atapattu
-
-LinkedIn:
-(Add LinkedIn)
-
-Email:
-(Add Email)
+Built with ❤️ using React + Vite.
