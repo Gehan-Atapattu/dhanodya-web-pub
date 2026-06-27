@@ -135,7 +135,7 @@ function Navbar(): React.JSX.Element {
               <Link
                 onClick={closeMenu}
                 activeClass="active"
-                to="services"
+                to="services" offset={-100}
                 spy
                 smooth
                 duration={1000}
@@ -148,7 +148,7 @@ function Navbar(): React.JSX.Element {
               <Link
                 onClick={closeMenu}
                 activeClass="active"
-                to="opportunities"
+                to="opportunities" offset={-100}
                 spy
                 smooth
                 duration={1000}
@@ -161,7 +161,7 @@ function Navbar(): React.JSX.Element {
               <Link
                 onClick={closeMenu}
                 activeClass="active"
-                to="success-stories"
+                to="success-stories" offset={-100}
                 spy
                 smooth
                 duration={1000}
@@ -174,7 +174,7 @@ function Navbar(): React.JSX.Element {
               <Link
                 onClick={closeMenu}
                 activeClass="active"
-                to="about-scroll"
+                to="about-scroll" offset={-100}
                 spy
                 smooth
                 duration={1000}
@@ -187,7 +187,7 @@ function Navbar(): React.JSX.Element {
               <Link
                 onClick={closeMenu}
                 activeClass="active"
-                to="contact"
+                to="contact" offset={-100}
                 spy
                 smooth
                 duration={1000}
