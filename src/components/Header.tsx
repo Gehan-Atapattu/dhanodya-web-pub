@@ -14,7 +14,7 @@ import image3 from "../img/image3.jpg";
 import image5 from "../img/image5.jpg";
 import image6 from "../img/image6.png";
 
-import ShimmerText from "./ShimmerText";
+
 
 interface Slide {
   image: string;
