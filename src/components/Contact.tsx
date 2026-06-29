@@ -10,6 +10,9 @@ function Contact(): React.JSX.Element {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
+  // Record when the page/form was loaded
+  const [loadedAt] = useState(() => Date.now());
+
   // Hide status message after 3 seconds
   useEffect(() => {
     if (!status) return;
@@ -25,6 +28,32 @@ function Contact(): React.JSX.Element {
     e.preventDefault();
 
     if (!formRef.current) return;
+
+    // ----------------------------
+    // Honeypot check
+    // ----------------------------
+    const honeypot = (
+      formRef.current.elements.namedItem("website") as HTMLInputElement
+    )?.value;
+
+    if (honeypot) {
+      console.warn("Spam blocked (honeypot).");
+      formRef.current.reset();
+      setStatus("✅ Message sent successfully.");
+      return;
+    }
+
+    // ----------------------------
+    // Minimum fill time check
+    // ----------------------------
+    const secondsOnPage = (Date.now() - loadedAt) / 1000;
+
+    if (secondsOnPage < 3) {
+      console.warn("Spam blocked (submitted too quickly).");
+      formRef.current.reset();
+      setStatus("✅ Message sent successfully.");
+      return;
+    }
 
     setLoading(true);
     setStatus("");
@@ -63,6 +92,26 @@ function Contact(): React.JSX.Element {
       </h2>
 
       <form ref={formRef} onSubmit={sendEmail}>
+        {/* Honeypot field (hidden from users) */}
+        <div
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            opacity: 0,
+            pointerEvents: "none",
+          }}
+          aria-hidden="true"
+        >
+          <label htmlFor="website">Website</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
+
         <div className="row">
           <div className="col-md-4 mb-1">
             <input
