@@ -1,16 +1,141 @@
-# React + Vite
+# 🌾 Dhanodya Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for **Dhanodya**, built with **React**, **Vite**, and **Tailwind CSS**. The project showcases the organization's mission, services, opportunities, success stories, and contact information with a clean and engaging user interface.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 📱 Fully responsive design
+- ⚡ Fast performance powered by Vite
+- 🎨 Modern UI with Tailwind CSS
+- 🌍 Multi-language support using i18next
+- 🎭 Smooth animations with Framer Motion
+- 🔄 Smooth scrolling navigation
+- 🖼️ Interactive sections including:
+  - Home
+  - About
+  - Services
+  - Opportunities
+  - Success Stories
+  - Contact
+- 📌 Reusable React components
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- React Scroll
+- i18next
+- Swiper
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+│── assets/
+│── components/
+│   ├── About.tsx
+│   ├── Card.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Main.tsx
+│   ├── Navbar.tsx
+│   ├── Opportunities.tsx
+│   ├── Services.tsx
+│   └── SuccessStories.tsx
+│
+│── css/
+│── img/
+│── App.jsx
+│── i18n.js
+│── main.tsx
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or later)
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+https://github.com/Gehan-Atapattu/dhanodya-web-pub.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd dhanodya-website
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+## 📦 Available Scripts
+
+| Command | Description |
+|----------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## 🌐 Internationalization
+
+The project includes **i18next** for multilingual support. Translation configuration can be found in:
+
+```text
+src/i18n.js
+```
+
+## 🎨 UI Components
+
+The website includes:
+
+- Responsive Navigation Bar
+- Hero/Header Section
+- About Section
+- Services Section
+- Opportunities Section
+- Success Stories
+- Contact Section
+- Footer
+
+## 📱 Responsive Design
+
+The website is optimized for:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
+
+## 📄 License
+
+This project is intended for the Dhanodya organization. Update the license section as required for your organization.
+
+---
+
+Built with ❤️ using React + Vite.
