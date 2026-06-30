@@ -1,8 +1,14 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 function SuccessStories(): React.JSX.Element {
   const { t } = useTranslation();
+
+  const [selectedStory, setSelectedStory] = useState<{
+    title: string;
+    text: string;
+  } | null>(null);
 
   const stories = [
     {
@@ -18,6 +24,20 @@ function SuccessStories(): React.JSX.Element {
       text: t("success.performance.text"),
     },
   ];
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSelectedStory(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   const cardVariants = {
     hidden: {
@@ -58,14 +78,71 @@ function SuccessStories(): React.JSX.Element {
               }}
               viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="success-card">
+              <div
+                className="success-card"
+                style={{ cursor: "pointer" }}
+                onClick={() => setSelectedStory(story)}
+              >
                 <h3 className="card-title">{story.title}</h3>
-                <p className="card-text">{story.text}</p>
+                <p className="card-text">
+                  {story.text.length > 120
+                    ? `${story.text.substring(0, 120)}...`
+                    : story.text}
+                </p>
               </div>
             </motion.div>
           </div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {selectedStory && (
+          <motion.div
+            className="modal-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            onClick={() => setSelectedStory(null)}
+          >
+            <motion.div
+              className="story-modal"
+              initial={{
+                opacity: 0,
+                scale: 0.8,
+                y: 40,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                scale: 0.8,
+                y: 40,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+                damping: 22,
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="close-btn"
+                onClick={() => setSelectedStory(null)}
+              >
+                ✕
+              </button>
+
+              <h2 className="card-title">{selectedStory.title}</h2>
+
+              <p className="card-text">{selectedStory.text}</p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

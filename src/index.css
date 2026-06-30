@@ -1045,6 +1045,88 @@ ul li a {
   }
 
 
+}
 
 
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(8, 17, 46, 0.85);
+  backdrop-filter: blur(8px);
+
+  z-index: 99999;
+  padding: 24px;
+}
+
+.story-modal {
+  position: relative;
+
+  width: min(750px, 90vw);
+  max-height: 85vh;
+  overflow-y: auto;
+
+  background: rgba(13, 33, 79, 0.98);
+  color: #f5f1e1;
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 18px;
+
+  padding: 40px;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.45),
+    0 0 30px rgba(212,175,55,.08);
+}
+
+.story-modal .card-title {
+  color: #f2d066;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.story-modal .card-text {
+  color: #dcd2a6;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(212,175,55,.3);
+  border-radius: 50%;
+
+  background: rgba(212,175,55,.1);
+  color: #f2d066;
+
+  font-size: 22px;
+  cursor: pointer;
+
+  transition: .25s;
+}
+
+.close-btn:hover {
+  background: #d4af37;
+  color: #08112e;
+  transform: rotate(90deg) scale(1.05);
+}
+
+.story-modal .card-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin-top: 12px;
+    background: linear-gradient(to right, #d4af37, #f2d066);
+    border-radius: 999px;
 }
