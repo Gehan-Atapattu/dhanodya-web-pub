@@ -7,10 +7,10 @@ import Contact from "./Contact";
 function Main(): React.JSX.Element {
   return (
     <main>
+      <About />
       <Services />
       <Opportunities />
       <SuccessStories />
-      <About />
       <Contact />
     </main>
   );

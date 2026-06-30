@@ -131,6 +131,19 @@ function Navbar(): React.JSX.Element {
               </Link>
             </li>
 
+             <li>
+              <Link
+                onClick={closeMenu}
+                activeClass="active"
+                to="about-scroll" offset={-100}
+                spy
+                smooth
+                duration={1000}
+              >
+                {t("nav.about")}
+              </Link>
+            </li>
+
             <li>
               <Link
                 onClick={closeMenu}
@@ -167,19 +180,6 @@ function Navbar(): React.JSX.Element {
                 duration={1000}
               >
                 {t("nav.success")}
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                onClick={closeMenu}
-                activeClass="active"
-                to="about-scroll" offset={-100}
-                spy
-                smooth
-                duration={1000}
-              >
-                {t("nav.about")}
               </Link>
             </li>
 
