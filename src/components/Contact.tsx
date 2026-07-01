@@ -44,7 +44,7 @@ function Contact(): React.JSX.Element {
     }
 
     // ----------------------------
-    // Minimum fill time check
+    // Minimum fill time check for security purpose
     // ----------------------------
     const secondsOnPage = (Date.now() - loadedAt) / 1000;
 
