@@ -17,7 +17,7 @@ const resources = {
       },
       header: {
         title: 'Welocome to Dhanodya',
-        subtitle: 'Together for a better tomorrow.',
+        subtitle: 'Together for a better tomorrow',
         signup: 'Sign Up',
         login: 'Log in',
       },
@@ -105,7 +105,7 @@ const resources = {
       },
       header: {
         title: 'ධනොද්‍යා වෙත සාදරයෙන් පිළිගනිමු ',
-        subtitle: 'හෙට දවස සඳහා එකට.',
+        subtitle: 'හෙට දවස සඳහා එකට',
         signup: 'ලියාපදිංචි වන්න',
         login: 'ඇතුල් වන්න',
       },
