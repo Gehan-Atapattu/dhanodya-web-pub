@@ -82,52 +82,27 @@ function Header(): React.JSX.Element {
                 <h1>{slide.title}</h1>
             
 
-
- 
-<motion.p
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="relative inline-block overflow-hidden text-white"
->
-  {/* Base text */}
-  <span className="relative z-10">{slide.subtitle}</span>
-
-  {/* Glass ribbon */}
-  <motion.div
-    className="absolute inset-0 pointer-events-none"
-    initial={{ x: "-150%" }}
-    animate={{ x: "150%" }}
-    transition={{
-      duration: 2.5,
-      repeat: Infinity,
-      repeatType: "loop",
-      ease: "linear",
-    }}
-  >
-    <div
-      className="h-full w-24 -skew-x-12"
-      style={{
-        background: `
-          linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,255,255,.15),
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.15),
-            transparent
-          )
-        `,
-        filter: "blur(6px)",
-        mixBlendMode: "screen",
-      }}
-    />
-  </motion.div>
-</motion.p>
-
-
-
-            
+                <motion.p
+                  className="text-white"
+                  style={{
+                          textShadow: `
+                          0 0 20px #fff,
+                          0 0 40px #fff,
+                          0 0 80px rgba(255,255,255,.8),
+                          0 0 120px rgba(255,255,255,.5)
+                          `,
+                        }}
+                  animate={{
+                  scale: [1, 1.015, 1],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  {slide.subtitle}
+                </motion.p>
 
 
                 <div className="hero-buttons">
